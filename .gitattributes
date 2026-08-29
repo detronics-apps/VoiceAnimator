@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
+# Text is stored with LF in the repository and checked out however the platform wants it,
+# so a clone on another machine does not show every file as modified.
 * text=auto
+
+# Binary, so git never tries to normalise or diff them as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.wav binary
+*.mp3 binary

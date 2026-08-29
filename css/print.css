@@ -1,0 +1,63 @@
+/*
+ * The printable sheet: the character, the pose chart and the exposure sheet, with the
+ * interface taken away. What an animator would tape to the desk.
+ */
+
+@media print {
+  .app-header,
+  .sidebar,
+  .app-footer,
+  .segmented,
+  .transport,
+  .timeline-bar,
+  .banners,
+  .btn,
+  .info,
+  .info__bubble,
+  .toast { display: none !important; }
+
+  html, body {
+    height: auto;
+    background: #fff;
+    color: #000;
+  }
+
+  body { display: block; }
+  .app-main { display: block; }
+  .viewport { display: block; overflow: visible; padding: 0; }
+
+  /* Tokens are resolved for paper: a navy-on-navy dark theme prints as a black page. */
+  :root, :root[data-theme="dark"] {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --panel-2: #f4f4f4;
+    --panel-3: #ececec;
+    --border: #bbbbbb;
+    --border-strong: #888888;
+    --text: #000000;
+    --text-dim: #333333;
+    --text-faint: #555555;
+    --accent-soft: #eef3f8;
+  }
+
+  .viewport__stage,
+  .trail-wrap,
+  .timeline-scroll,
+  .explain,
+  .stat {
+    border: 1px solid #bbb;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .timeline-scroll { overflow: visible; }
+  .part__grab, .part__handles, .part--empty { display: none; }
+  .timeline { width: 100% !important; height: auto; }
+  .trail-wrap { max-height: none; overflow: visible; }
+  .export__preview { max-height: none; overflow: visible; }
+
+  .explain { break-inside: avoid; }
+  .explain__body { display: block !important; }
+
+  a[href]::after { content: ""; }
+}

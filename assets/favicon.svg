@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The Detronics icon ground: 64x64, rx 12, navy. Identical in every app in the
+       family; only the subject on top changes. -->
+  <rect width="64" height="64" rx="12" fill="#1f2d3d"/>
+
+  <defs>
+    <clipPath id="mouth">
+      <ellipse cx="32" cy="40" rx="19" ry="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- The subject is a mouth mid-vowel, drawn in the colours a mouth is drawn in. -->
+  <ellipse cx="32" cy="40" rx="19" ry="14" fill="#70292c"/>
+  <g clip-path="url(#mouth)">
+    <rect x="12" y="26" width="40" height="8" fill="#fdfbf7"/>
+    <ellipse cx="32" cy="56" rx="12" ry="8" fill="#d4706c"/>
+  </g>
+  <ellipse cx="32" cy="40" rx="19" ry="14" fill="none" stroke="#f3d3b3" stroke-width="3"/>
+
+  <!-- Sound going in: three bars of a level meter, in the brand blue. -->
+  <rect x="14" y="14" width="5" height="8" rx="2" fill="#7fabc7"/>
+  <rect x="23" y="10" width="5" height="12" rx="2" fill="#7fabc7"/>
+  <rect x="32" y="13" width="5" height="9" rx="2" fill="#7fabc7"/>
+  <rect x="41" y="8" width="5" height="14" rx="2" fill="#7fabc7"/>
+</svg>
